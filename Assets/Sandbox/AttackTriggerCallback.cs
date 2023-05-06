@@ -9,7 +9,11 @@ public class AttackTriggerCallback : MonoBehaviour
         Debug.Log("Trigger entered");
 
         Rigidbody2D body = other.GetComponent<Rigidbody2D>();
-        body.AddForce(new Vector2(10,10));
+        Vector2 direction = Random.insideUnitSphere;
+
+        direction.Normalize();
+        direction.Scale(new Vector2(10.0f, 10.0f));
+        body.AddForce(direction);
 
         SpriteDamageIndicator indicator = other.GetComponent<SpriteDamageIndicator>();
         indicator.FlashRed();
