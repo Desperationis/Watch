@@ -8,15 +8,17 @@ public class AttackTriggerCallback : MonoBehaviour
     {
         Debug.Log("Trigger entered");
 
-        Rigidbody2D body = other.GetComponent<Rigidbody2D>();
-        Vector2 direction = Random.insideUnitSphere;
+        if(other.tag != "Player") {
+            Rigidbody2D body = other.GetComponent<Rigidbody2D>();
+            Vector2 direction = Random.insideUnitSphere;
 
-        direction.Normalize();
-        direction.Scale(new Vector2(10.0f, 10.0f));
-        body.AddForce(direction);
+            direction.Normalize();
+            direction.Scale(new Vector2(10.0f, 10.0f));
+            body.AddForce(direction);
 
-        SpriteDamageIndicator indicator = other.GetComponent<SpriteDamageIndicator>();
-        indicator.FlashRed();
+            SpriteDamageIndicator indicator = other.GetComponent<SpriteDamageIndicator>();
+            indicator.FlashRed();
+        }
     }
     private void OnTriggerStay2D(Collider2D other)
     {

@@ -6,28 +6,29 @@ using UnityEngine;
 [RequireComponent(typeof(MobController))]
 public class FollowerAI : AIBehavior
 {
+    [SerializeField]
+    private MobController mobController = null;
+
     public override void UpdateAI()
     {
-        /*PlayerObject nearestPlayer = PlayerRegistry.OverlapCircle(transform.position, dataComponent.aiData.followerRange);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
 
-        if(nearestPlayer != null)
-        {
-            mobController.SetRunning(true);
-            mobController.SetDirection(nearestPlayer.character.transform.position - transform.position);
-            mobController.UpdateFrame();
-        }*/
-
+        mobController.SetRunning(true);
+        mobController.SetDirection(player.transform.position - transform.position);
+        mobController.UpdateFrame();
     }
 
     public override bool CheckRequirement()
     {
-        //return PlayerRegistry.OverlapCircleAny(transform.position, dataComponent.aiData.followerRange);
-        return false;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector2 distance = player.transform.position - transform.position;
+
+        return distance.SqrMagnitude() < 3 * 3;
     }
 
     public override void OnSwitchLeave()
     {
-        //mobController.SetRunning(false);
-        //mobController.SetDirection(Vector2.zero);
+        mobController.SetRunning(false);
+        mobController.SetDirection(Vector2.zero);
     }
 }
