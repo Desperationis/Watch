@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleMovement : MonoBehaviour
+public class SwordSwing : MonoBehaviour
 {
     // Current angle of object
     private float angle = 0;
