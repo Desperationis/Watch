@@ -5483,9 +5483,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 160
-        y: 64
-        width: 16
-        height: 16
+        y: 48
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -5495,27 +5495,6 @@ TextureImporter:
       bones: []
       spriteID: f6d567be196317e98a615150deb9ba5a
       internalID: 1590472663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_255
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 64
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2173f6cf0b35dbbe9beb6b641313b3fb
-      internalID: -1918931554
       vertices: []
       indices: 
       edges: []
@@ -5810,48 +5789,6 @@ TextureImporter:
       bones: []
       spriteID: d2d7423051e0d9914877bf93427df00f
       internalID: -1004144212
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_270
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d1112e0d2b04ef12e905f53c669076d4
-      internalID: 1817895035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 0x72_16x16DungeonTileset.v5_271
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 48
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e239dcd85f9a5ee579bd50768e2cc521
-      internalID: -514225416
       vertices: []
       indices: 
       edges: []
