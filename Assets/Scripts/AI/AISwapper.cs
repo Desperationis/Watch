@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine;
 
 /// <summary>
 /// In charge of swapping between the different behaviors of a mob.
