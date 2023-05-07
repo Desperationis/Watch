@@ -18,10 +18,8 @@ public class AttackTriggerCallback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        //Debug.Log("Trigger entered");
-
-        // This check is needed so Player doesn't kill themselves
-        if(other.tag != "Player") {
+        // This check is needed so Attacker doesn't hurt themselves
+        if(other.tag != this.tag) {
             // Turn off MobController, otherwise force will do nothing
             MobController controller = other.GetComponent<MobController>();
             controller.UnPlugFor(knockbackDuration);
@@ -41,14 +39,5 @@ public class AttackTriggerCallback : MonoBehaviour
             SpriteDamageIndicator indicator = other.GetComponent<SpriteDamageIndicator>();
             indicator.FlashRed();
         }
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        //Debug.Log("Object still in trigger");
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        //Debug.Log("Object Left trigger");
     }
 }

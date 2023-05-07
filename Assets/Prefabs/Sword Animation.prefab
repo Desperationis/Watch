@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3886620743913105595}
   m_Layer: 0
   m_Name: AttackingBox
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,6 +61,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ddf4d5f1dd73d30d87e7f03d79b3879, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  knockbackStrength: 20
+  knockbackDuration: 0.15
+  damage: 20
 --- !u!1 &3788763495853368519
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,7 +79,7 @@ GameObject:
   - component: {fileID: 3788763495853368539}
   m_Layer: 0
   m_Name: Sword Animation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

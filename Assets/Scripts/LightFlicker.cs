@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 public class LightFlicker : MonoBehaviour
 {
     [SerializeField]
-    private Light2D light = null;
+    private new Light2D light = null;
 
     [SerializeField]
     private float min = 3.0f;

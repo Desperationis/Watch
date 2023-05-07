@@ -14507,6 +14507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword Animation
       objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368519, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: source
       value: 
