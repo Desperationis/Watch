@@ -9,11 +9,13 @@ public class MobController : MonoBehaviour
     [SerializeField]
 	private Rigidbody2D rigidBody = null;
 
+    private float unPlugDuration = 0.0f;
+    public bool isPlugged { get; private set; }
+
     public float speed { get; private set; }
     public float runningMultiplier { get; private set; }
     public bool isRunning { get; private set; }
     public Vector2 direction { get; private set; }
-    public bool movementDisabled { get; private set; }
 
     public Vector2 _cardinalDirection = Vector2.down;
 
@@ -39,30 +41,31 @@ public class MobController : MonoBehaviour
         }
     }
 
-    public bool isMoving {
+    public bool isStill {
         get
         {
-            return direction.sqrMagnitude != 0.0f && !movementDisabled;
+            return direction.sqrMagnitude == 0.0f;
         }
     }
 
     private void Awake()
     {
-        EnableMovement();
+        Plug();
         SetSpeed(1);
         SetRunningMultiplier(1);
         SetRunning(false);
         Stop();
     }
 
-    public void DisableMovement()
+    public void UnPlugFor(float duration)
     {
-        movementDisabled = true;
+        isPlugged = false;
+        unPlugDuration = duration;
     }
 
-    public void EnableMovement()
+    public void Plug()
     {
-        movementDisabled = false;
+        isPlugged = true;
     }
 
     /// <summary>
@@ -84,10 +87,7 @@ public class MobController : MonoBehaviour
     /// </param>
     public void SetDirection(Vector2 direction)
     {
-        if(!movementDisabled)
-        {
-            this.direction = direction.normalized;
-        }
+        this.direction = direction.normalized;
     }
 
 
@@ -127,17 +127,26 @@ public class MobController : MonoBehaviour
     public void UpdateFrame()
     {
         Vector2 calculatedVelocity = (Vector3)direction * speed;
-        rigidBody.velocity = Vector2.zero;
 
-        if (isRunning)
-        {
-            calculatedVelocity *= runningMultiplier;
-        }
+        if(isPlugged) {
+            rigidBody.velocity = Vector2.zero;
 
-        if(!movementDisabled)
-        {
+            if (isRunning)
+            {
+                calculatedVelocity *= runningMultiplier;
+            }
+
             rigidBody.velocity = calculatedVelocity;
         }
+
+        if(unPlugDuration <= 0) {
+            Plug();
+        }
+        
+        if(unPlugDuration > 0) {
+            unPlugDuration -= Time.deltaTime;
+        }
+
     }
 }
 

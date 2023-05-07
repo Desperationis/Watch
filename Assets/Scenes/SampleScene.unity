@@ -13498,6 +13498,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword Animation
       objectReference: {fileID: 0}
+    - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 1446569597}
+    - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: knockbackStrength
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
 --- !u!1001 &4436234937385438918
