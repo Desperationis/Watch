@@ -14503,6 +14503,10 @@ PrefabInstance:
       propertyPath: origin
       value: 
       objectReference: {fileID: 1446569597}
+    - target: {fileID: 3788763495853368518, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: maxAngle
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3788763495853368519, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: m_Name
       value: Sword Animation
