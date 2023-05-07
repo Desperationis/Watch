@@ -8,16 +8,16 @@ using UnityEngine.Events;
 /// </summary>
 public class Health : MonoBehaviour
 {
-    public int health { get; private set; }
+    // Change to this one later on when health is determined
+    // By mob rule files
+    //public int health { get; private set; }
+    public int health = 100;
+
+    public int maxHealth = 100;
 
     private class HealthEvent : UnityEvent<int> { }
 
     private HealthEvent onHealthChange = new HealthEvent();
-
-    public void Awake() {
-        health = 100;
-
-    }
 
     public void TakeDamage(int amount)
     {
