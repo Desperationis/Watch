@@ -13,6 +13,12 @@ public class Dash : MonoBehaviour
     [SerializeField] private MobController mobController = null;
     [SerializeField] private TrailRenderer trailRenderer = null;
 
+    private void Start() 
+    {
+        trailRenderer.emitting = false;
+
+    }
+
     // Update is called once per frame
     void Update()
     {

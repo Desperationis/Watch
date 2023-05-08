@@ -16,10 +16,30 @@ public class AttackTriggerCallback : MonoBehaviour
     [SerializeField]
     private int damage = 20;
 
+    [SerializeField]
+    private Collider2D collider = null;
+
+    [SerializeField]
+    private string tagToIgnore = "";
+
+
+    private void Start() 
+    {
+        collider.enabled = false;
+    }
+
+    public void EnableHitbox() {
+        collider.enabled = true;
+    }
+
+    public void DisableHitbox() {
+        collider.enabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // This check is needed so Attacker doesn't hurt themselves
-        if(other.tag != this.tag) {
+        if(other.tag != tagToIgnore) {
             // Turn off MobController, otherwise force will do nothing
             MobController controller = other.GetComponent<MobController>();
             controller.UnPlugFor(knockbackDuration);

@@ -45,6 +45,9 @@ public class SwordSwing : MonoBehaviour
     [SerializeField]
     private TrailRenderer trail = null;
 
+    [SerializeField]
+    private AttackTriggerCallback callback = null;
+
     void UpdatePosition() {
         Vector3 offset = new Vector2();
         offset.x = radius * Mathf.Cos((angle + cachedMouseAngle) * Mathf.Deg2Rad);
@@ -65,6 +68,7 @@ public class SwordSwing : MonoBehaviour
 
 
         if(Input.GetButton("Fire1") && !pressed) {
+            callback.EnableHitbox();
             swings = 0;
 
             // Swing will pivot from this point
@@ -103,6 +107,7 @@ public class SwordSwing : MonoBehaviour
         }
         else {
             trail.emitting = false;
+            callback.DisableHitbox();
         }
 
 
