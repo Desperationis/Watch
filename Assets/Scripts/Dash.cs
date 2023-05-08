@@ -5,18 +5,13 @@ using UnityEngine;
 public class Dash : MonoBehaviour
 {
 
-    [SerializeField]
-    private float dashLength = 1.0f;
-    [SerializeField]
-    private float dashDuration = 0.05f;
-    [SerializeField]
-    private float dashCooldown = 0.0f;
-    [SerializeField]
-    private bool isOnCooldown = false;
-    [SerializeField]
-    private Rigidbody2D rigidBody2D = null;
-    [SerializeField]
-    private MobController mobController = null;
+    [SerializeField] private float dashLength = 20.0f;
+    [SerializeField] private float dashDuration = 0.15f;
+    [SerializeField] private float dashCooldown = 0.0f;
+    [SerializeField] private bool isOnCooldown = false;
+    [SerializeField] private Rigidbody2D rigidBody2D = null;
+    [SerializeField] private MobController mobController = null;
+    [SerializeField] private TrailRenderer trailRenderer = null;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +19,14 @@ public class Dash : MonoBehaviour
         if(isOnCooldown)
         {
             dashCooldown -= 0.5f * Time.deltaTime;
+            if(dashCooldown > 0.7f)
+            {
+                trailRenderer.emitting = true;
+            }
+            else
+            {
+                trailRenderer.emitting = false;
+            }
         }
 
         if(dashCooldown <= 0)
