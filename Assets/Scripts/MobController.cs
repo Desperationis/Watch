@@ -51,8 +51,8 @@ public class MobController : MonoBehaviour
     private void Awake()
     {
         Plug();
-        SetSpeed(1);
-        SetRunningMultiplier(1);
+        // SetSpeed(1);
+        // SetRunningMultiplier(1);
         SetRunning(false);
         Stop();
     }

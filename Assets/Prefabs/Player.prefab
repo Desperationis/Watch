@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 1294910837854269338}
   - component: {fileID: 1294910837854269317}
   - component: {fileID: 1294910837854269327}
+  - component: {fileID: 755925797400935665}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -271,7 +272,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobController: {fileID: 1294910838308494926}
-  walkingSpeed: 6
 --- !u!61 &1294910838308494922
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -439,8 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a4e859b6ca6c654bb9c0720225ec0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 5
-  maxHealth: 8
 --- !u!114 &1294910837854269317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,6 +474,21 @@ MonoBehaviour:
   animator: {fileID: 1294910837854269324}
   mobController: {fileID: 1294910838308494926}
   inverseDirection: 0
+--- !u!114 &755925797400935665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294910838308494924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cfb8c5f04a5a05e798064160c758118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobData: {fileID: 11400000, guid: 0f67550cccf6b2970bf22a72f5b3d29e, type: 2}
+  mobController: {fileID: 1294910838308494926}
+  health: {fileID: 1294910837854269338}
 --- !u!1001 &357610195749438740
 PrefabInstance:
   m_ObjectHideFlags: 0

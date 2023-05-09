@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
 	private MobController mobController = null;
 
-	[SerializeField]
-	private float walkingSpeed = 4.0f;
-
     void Update()
     {
 		mobController.Stop();
@@ -29,7 +26,6 @@ public class PlayerController : MonoBehaviour
 			direction.x = -1;
 
 		mobController.SetDirection(direction);
-		mobController.SetSpeed(walkingSpeed);
 
 		mobController.UpdateFrame();
     }
