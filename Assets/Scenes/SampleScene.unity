@@ -13663,6 +13663,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: source
       value: 
       objectReference: {fileID: 1446569597}
@@ -13687,6 +13691,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6328546795203647403, guid: fd6dd4cf3f09210b0af35cab17edff1e, type: 3}
+      propertyPath: health
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6328546795203647403, guid: fd6dd4cf3f09210b0af35cab17edff1e, type: 3}
+      propertyPath: maxHealth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6328546795203647441, guid: fd6dd4cf3f09210b0af35cab17edff1e, type: 3}
       propertyPath: m_Name
       value: BM1
