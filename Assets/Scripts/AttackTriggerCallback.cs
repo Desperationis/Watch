@@ -14,7 +14,7 @@ public class AttackTriggerCallback : MonoBehaviour
     private float knockbackDuration = 0.15f;
 
     [SerializeField]
-    private int damage = 20;
+    private int damage = 1;
 
     [SerializeField]
     private Collider2D collider = null;
