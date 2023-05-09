@@ -10,18 +10,28 @@ public class Health : MonoBehaviour
 {
     // Change to this one later on when health is determined
     // By mob rule files
-    //public int health { get; private set; }
-    public int health = 10;
-
-    public int maxHealth = 10;
+    public int health { get; private set; }
+    public int maxHealth { get; private set; }
 
     private class HealthEvent : UnityEvent<int> { }
 
     private HealthEvent onHealthChange = new HealthEvent();
+    private HealthEvent onMaxHealthChange = new HealthEvent();
 
     public void TakeDamage(int amount)
     {
         SetHealth(health - amount);
+    }
+
+    public void SetMaxHealth(int maxHealth) 
+    {
+        int pastMaxHealth = this.maxHealth;
+        this.maxHealth = Mathf.Max(maxHealth, 0);
+
+        if(pastMaxHealth != this.maxHealth)
+        {
+            onMaxHealthChange.Invoke(this.maxHealth);
+        }
     }
 
 
@@ -36,14 +46,6 @@ public class Health : MonoBehaviour
         if(pastHealth != this.health)
         {
             onHealthChange.Invoke(this.health);
-            // 0 Listener 1
-            //      100 Listener 1
-            //      100 Listener 2
-            //      100 Listener 3
-            //      100 Listener 4
-            // 0 <- Listener 2
-            // 0 <- Listener 3
-            // 0 <- Listener 4
         }
     }
 
