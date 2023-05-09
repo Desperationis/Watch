@@ -48,7 +48,7 @@ public class MobAnimationController : MonoBehaviour
     {
         animator.SetFloat("cardinalX", mobController.cardinalDirection.x);
         animator.SetFloat("cardinalY", mobController.cardinalDirection.y);
-        //animator.SetFloat("moving", mobController.isMoving ? 1 : -1);
+        animator.SetBool("moving", mobController.isMoving);
         //animator.SetFloat("running", mobController.isRunning && mobController.isMoving ? 1 : -1);
     }
     private void FlipAnimation()
