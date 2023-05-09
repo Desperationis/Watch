@@ -13984,6 +13984,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a54792f52e98460a4eda836061b1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &2030950328 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4436234935945242810, guid: 0ec9edbbcf8b3c7f4995cdc7a7e3623c, type: 3}
+  m_PrefabInstance: {fileID: 4436234937385438918}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &2030950329
 Animator:
   serializedVersion: 5
@@ -14005,6 +14010,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2030950330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030950313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29eea2588beefe0a7820fe129039e7f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 2030950328}
+  animator: {fileID: 2030950329}
+  mobController: {fileID: 2030950325}
+  inverseDirection: 0
 --- !u!1001 &1517165653707111713
 PrefabInstance:
   m_ObjectHideFlags: 0

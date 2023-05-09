@@ -41,10 +41,10 @@ public class MobController : MonoBehaviour
         }
     }
 
-    public bool isStill {
+    public bool isMoving {
         get
         {
-            return direction.sqrMagnitude == 0.0f;
+            return direction.sqrMagnitude != 0.0f;
         }
     }
 
