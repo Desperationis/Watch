@@ -65,6 +65,8 @@ MonoBehaviour:
   knockbackStrength: 20
   knockbackDuration: 0.15
   damage: 20
+  collider: {fileID: 0}
+  tagToIgnore: 
 --- !u!1 &3788763495853368519
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,11 +167,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anglePerSec: 1440
-  radius: 1
+  radius: 1.3
   maxSwings: 1
-  maxAngle: 60
+  maxAngle: 45
   origin: {fileID: 0}
   trail: {fileID: 3788763495853368539}
+  callback: {fileID: 0}
 --- !u!96 &3788763495853368539
 TrailRenderer:
   serializedVersion: 2
