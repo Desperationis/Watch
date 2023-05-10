@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: 6328546795203647402}
   - component: {fileID: 6328546795203647404}
   - component: {fileID: 1480574657405726825}
+  - component: {fileID: 1128965666084984680}
+  - component: {fileID: 2161879538840339217}
   m_Layer: 0
   m_Name: BM1
   m_TagString: Untagged
@@ -253,3 +255,29 @@ MonoBehaviour:
   mobData: {fileID: 11400000, guid: b003e4fb8b37ba11a842eaed545bea33, type: 2}
   mobController: {fileID: 6328546795203647446}
   health: {fileID: 6328546795203647403}
+--- !u!114 &1128965666084984680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6328546795203647441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01612dc9aee90d120a040d77b52240ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2161879538840339217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6328546795203647441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb4515575bb93c5e890c8b2a6bc8d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mobController: {fileID: 6328546795203647446}
+  rigidbody2D: {fileID: 6328546795203647445}

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+[RequireComponent(typeof(AttackHub))]
 public class Mortality : MonoBehaviour
 {
     [SerializeField]
@@ -9,6 +11,13 @@ public class Mortality : MonoBehaviour
     private void Awake()
     {
         health.AddListener(CheckHealth);
+
+        AttackHub hub = GetComponent<AttackHub>();
+        hub.onAttack += TakeDamage;
+    }
+
+    private void TakeDamage(GameObject o, AttackData a) {
+        health.TakeDamage(a.damage);
     }
 
     private void CheckHealth(int health)
