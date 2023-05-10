@@ -13675,6 +13675,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1392825371}
     - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: attackData
+      value: 
+      objectReference: {fileID: 11400000, guid: 3bc1e29633bf89cb29dd2300a52ce564, type: 2}
+    - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: tagToIgnore
       value: Player
       objectReference: {fileID: 0}

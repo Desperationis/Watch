@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: PlayerAttackData
   m_EditorClassIdentifier: 
   damage: 2
+  knockbackDuration: 0.15
+  knockbackStrength: 50

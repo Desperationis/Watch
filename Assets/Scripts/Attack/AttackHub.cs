@@ -8,11 +8,12 @@ using UnityEngine;
 /// </summary>
 public class AttackHub : MonoBehaviour
 {
-    public delegate void AttackDelegate(AttackData a);
-    public event AttackDelegate onAttack; // "event" is Unity's event delegate
+    public delegate void AttackDelegate(GameObject source, AttackData a);
+    public event AttackDelegate onAttack = null; // "event" is Unity's event delegate
 
-    void ReceiveDamage(AttackData a) {
-        onAttack.Invoke(a);
+    public void ApplyDamage(GameObject source, AttackData a) {
+        if(onAttack != null)
+            onAttack.Invoke(source, a);
     }
 
 }

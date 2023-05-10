@@ -8,10 +8,7 @@ public class AttackTriggerCallback : MonoBehaviour
     private Transform source = null;
 
     [SerializeField]
-    private float knockbackStrength = 20.0f;
-
-    [SerializeField]
-    private float knockbackDuration = 0.15f;
+    private AttackData attackData = null;
 
     [SerializeField]
     private int damage = 1;
@@ -40,16 +37,8 @@ public class AttackTriggerCallback : MonoBehaviour
     {
         // This check is needed so Attacker doesn't hurt themselves
         if(other.tag != tagToIgnore) {
-            // Turn off MobController, otherwise force will do nothing
-            MobController controller = other.GetComponent<MobController>();
-            controller.UnPlugFor(knockbackDuration);
-
-            // Calculate knockback direction
-            Rigidbody2D body = other.GetComponent<Rigidbody2D>();
-            Vector2 direction = other.transform.position - source.transform.position;
-            direction.Normalize();
-            direction.Scale(new Vector2(knockbackStrength, knockbackStrength));
-            body.AddForce(direction);
+            AttackHub hub = other.GetComponent<AttackHub>();
+            hub.ApplyDamage(source.gameObject, attackData);
 
             // Take off health
             Health health = other.GetComponent<Health>();

@@ -4,4 +4,7 @@ using UnityEngine;
 public class AttackData : ScriptableObject
 {
     public int damage;
+    public float knockbackDuration;
+
+    public float knockbackStrength;
 }
