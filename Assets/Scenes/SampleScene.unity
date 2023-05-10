@@ -13251,6 +13251,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 2812812874266067527, guid: d46db4c886af67d21b3e0f4a458c4da1, type: 3}
   playerHealth: {fileID: 2030950319}
+--- !u!1 &817547755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1294910838308494924, guid: ca62572a7bf40ca1388b9e7f412e31a9, type: 3}
+  m_PrefabInstance: {fileID: 1294910836931213365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1056299317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13512,7 +13517,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1294910837854269338, guid: ca62572a7bf40ca1388b9e7f412e31a9, type: 3}
   m_PrefabInstance: {fileID: 1294910836931213365}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 817547755}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a4e859b6ca6c654bb9c0720225ec0ea, type: 3}
@@ -13669,7 +13674,7 @@ PrefabInstance:
     - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: source
       value: 
-      objectReference: {fileID: 1446569597}
+      objectReference: {fileID: 817547755}
     - target: {fileID: 3886620743913105595, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: collider
       value: 

@@ -5,13 +5,10 @@ using UnityEngine;
 public class AttackTriggerCallback : MonoBehaviour
 {
     [SerializeField]
-    private Transform source = null;
+    private GameObject source = null;
 
     [SerializeField]
     private AttackData attackData = null;
-
-    [SerializeField]
-    private int damage = 1;
 
     [SerializeField]
     private Collider2D collider = null;
@@ -22,14 +19,16 @@ public class AttackTriggerCallback : MonoBehaviour
 
     private void Start() 
     {
-        collider.enabled = false;
+        EnableHitbox();
     }
 
-    public void EnableHitbox() {
+    public void EnableHitbox() 
+    {
         collider.enabled = true;
     }
 
-    public void DisableHitbox() {
+    public void DisableHitbox() 
+    {
         collider.enabled = false;
     }
 
@@ -40,7 +39,7 @@ public class AttackTriggerCallback : MonoBehaviour
             // Broadcast hurt message to object. It is up to the object to
             // decide what happens.
             AttackHub hub = other.GetComponent<AttackHub>();
-            hub.ApplyDamage(source.gameObject, attackData);
+            hub.ApplyDamage(source, attackData);
         }
     }
 }
