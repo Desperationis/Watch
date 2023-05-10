@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AttackHub))]
 public class SpriteDamageIndicator : MonoBehaviour
 {
     private float timeAccumulation = 0.0f;
@@ -20,7 +21,12 @@ public class SpriteDamageIndicator : MonoBehaviour
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
-    void Update() {
+    private void Start() {
+        AttackHub hub = GetComponent<AttackHub>();
+        hub.onAttack += FlashRed;
+    }
+
+    private void Update() {
         if(recovering) {
             Color interColor = Color.Lerp(DAMAGE_COLOR, REGULAR_COLOR, timeAccumulation / flashDuration);
 
@@ -49,8 +55,9 @@ public class SpriteDamageIndicator : MonoBehaviour
         }
     } 
 
-    // Called when Mob takes Damage
-    public void FlashRed() {
+    
+    public void FlashRed(GameObject o, AttackData a) {
+        // This will flash the mob once
         flashRed = true;
     }
 }

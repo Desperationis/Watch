@@ -37,16 +37,10 @@ public class AttackTriggerCallback : MonoBehaviour
     {
         // This check is needed so Attacker doesn't hurt themselves
         if(other.tag != tagToIgnore) {
+            // Broadcast hurt message to object. It is up to the object to
+            // decide what happens.
             AttackHub hub = other.GetComponent<AttackHub>();
             hub.ApplyDamage(source.gameObject, attackData);
-
-            // Take off health
-            Health health = other.GetComponent<Health>();
-            health.TakeDamage(damage);
-
-            // Flash mob red to indicate damage
-            SpriteDamageIndicator indicator = other.GetComponent<SpriteDamageIndicator>();
-            indicator.FlashRed();
         }
     }
 }
