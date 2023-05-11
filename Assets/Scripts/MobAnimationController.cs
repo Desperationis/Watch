@@ -46,8 +46,8 @@ public class MobAnimationController : MonoBehaviour
 
     private void UpdateMovementVariables()
     {
-        animator.SetFloat("cardinalX", mobController.cardinalDirection.x);
-        animator.SetFloat("cardinalY", mobController.cardinalDirection.y);
+        //animator.SetFloat("cardinalX", mobController.cardinalDirection.x);
+        //animator.SetFloat("cardinalY", mobController.cardinalDirection.y);
         animator.SetBool("moving", mobController.isMoving);
         //animator.SetFloat("running", mobController.isRunning && mobController.isMoving ? 1 : -1);
     }
