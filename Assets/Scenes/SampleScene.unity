@@ -13512,6 +13512,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1938834629 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3788763495853368517, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+  m_PrefabInstance: {fileID: 3788763494468674283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2030950319 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1294910837854269338, guid: ca62572a7bf40ca1388b9e7f412e31a9, type: 3}
@@ -13596,6 +13601,18 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3788763495853368516, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368516, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368516, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368516, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.18
       objectReference: {fileID: 0}
@@ -13636,8 +13653,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3788763495853368517, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2121618551, guid: f889b00621ac7fd8591da8da38789c10, type: 3}
+    - target: {fileID: 3788763495853368517, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368517, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3788763495853368518, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: origin
@@ -13655,6 +13680,10 @@ PrefabInstance:
       propertyPath: maxAngle
       value: 45
       objectReference: {fileID: 0}
+    - target: {fileID: 3788763495853368518, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1938834629}
     - target: {fileID: 3788763495853368519, guid: 52917d9f49574d94eaf02a9575e364f3, type: 3}
       propertyPath: m_Name
       value: Sword Animation
